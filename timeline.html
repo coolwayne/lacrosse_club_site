@@ -5,67 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>五年发展时间轴</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .timeline-container {
-      position: relative;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      background-color: #f9f9f9;
-    }
-
-    .timeline-container::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      background-color: #3a3a3a;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -3px;
-    }
-
-    .timeline-item {
-      padding: 20px;
-      position: relative;
-      width: 50%;
-      text-align: center;
-    }
-
-    .timeline-item.left {
-      left: 0;
-    }
-
-    .timeline-item.right {
-      left: 50%;
-    }
-
-    .timeline-item .content {
-      padding: 20px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .timeline-item.left .content {
-      text-align: right;
-    }
-
-    .timeline-item.right .content {
-      text-align: left;
-    }
-
-    .timeline-item .content a {
-      text-decoration: none;
-      color: #333;
-    }
-
-    .timeline-item .content:hover {
-      background-color: #e6f7ff;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
 
@@ -82,34 +21,31 @@
   </nav>
 
   <!-- 五年发展时间轴 -->
-  <div class="timeline-container">
-    <div class="timeline-item left">
-      <div class="content">
-        <a href="year1.html">第一年 - 品牌建立、社群累積與營收起步</a>
-      </div>
-    </div>
+  <div class="content-container">
+    <h1>五年发展时间轴</h1>
 
-    <div class="timeline-item right">
-      <div class="content">
-        <a href="year2.html">第二年 - 市场拓展、课程推广</a>
-      </div>
-    </div>
+    <div class="timeline-container">
+      <div class="timeline"></div>
 
-    <div class="timeline-item left">
-      <div class="content">
-        <a href="year3.html">第三年 - 联赛建设、国家队选拔</a>
+      <div class="year year-left">
+        <h2>第一年</h2>
+        <p>品牌建立、社群累积与营收起步</p>
       </div>
-    </div>
-
-    <div class="timeline-item right">
-      <div class="content">
-        <a href="year4.html">第四年 - 国家队培养、国际比赛</a>
+      <div class="year year-right">
+        <h2>第二年</h2>
+        <p>规模扩张与市场渗透</p>
       </div>
-    </div>
-
-    <div class="timeline-item left">
-      <div class="content">
-        <a href="year5.html">第五年 - 常年联赛与国际发展</a>
+      <div class="year year-left">
+        <h2>第三年</h2>
+        <p>会员制发展与本地化推广</p>
+      </div>
+      <div class="year year-right">
+        <h2>第四年</h2>
+        <p>商业化运作与全球合作</p>
+      </div>
+      <div class="year year-left">
+        <h2>第五年</h2>
+        <p>国际赛场突破、长期发展</p>
       </div>
     </div>
   </div>
