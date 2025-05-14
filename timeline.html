@@ -1,28 +1,57 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <title>五年发展时间轴</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .timeline { max-width: 800px; margin: auto; padding: 40px 20px; }
+    .year-block {
+      background: #f0f4ff;
+      border-left: 6px solid #007aff;
+      margin: 30px 0;
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .year-block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .year-block h2 { margin-top: 0; }
+  </style>
 </head>
 <body>
-<nav>
-  <ul>
-    <li><a href="index.html">首页</a></li>
-    <li><a href="timeline.html">五年发展时间轴</a></li>
-    <li><a href="clubs.html">俱乐部名单</a></li>
-    <li><a href="training.html">师资培训</a></li>
-    <li><a href="about.html">关于我们</a></li>
-  </ul>
-</nav>
-<header><h1>五年发展时间轴</h1></header>
-<section>
-  <div class="timeline-step"><strong>第1年：</strong> 建立北京首个青少年俱乐部，与国际学校合作开展课后项目，举办第一届校内外联赛。與美國、加拿大等長曲棍球盛行國家的使館合作：邀請外交機構協辦活動、贊助器材、提供文化交流與資源支持，迅速累積運動初期用戶群並擴大曝光。</div>
-  <div class="timeline-step"><strong>第2年：</strong> 在上海和深圳成立分部，复制北京模式；打造青少年联赛（U10/U12）示范赛；培训首批本地裁判和教练。</div>
-  <div class="timeline-step"><strong>第3年：</strong> 联赛建设：北京、上海、深圳等地运行本地联赛（男/女、成年/青少年）；举办首届全国青少年棍网球锦标赛；扩大社会影响。</div>
-  <div class="timeline-step"><strong>第4年：</strong> 国家队培养：选拔并组建青少年国家队，参加亚太和世界U19赛事；重点培养守门员、专项位置；派遣运动员赴美/加交流或升学。</div>
-  <div class="timeline-step"><strong>第5年：</strong> 建立常年全国联赛体系，男女成年国家队备战国际大赛（亚运会、世锦赛预选）；在全国范围内持续推广校园项目；争取北京奥运后续支持。</div>
-</section>
+  <header>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="timeline.html">五年发展时间轴</a>
+      <a href="clubs.html">俱乐部名单</a>
+      <a href="training.html">师资培训</a>
+      <a href="about.html">关于我们</a>
+    </nav>
+  </header>
+  <main class="timeline">
+    <div class="year-block"><h2>第1年</h2><p>建立北京首个青少年俱乐部，与国际学校合作开展课后项目，举办第一届校内外联赛。與美國、加拿大等長曲棍球盛行國家的使館合作：邀請外交機構協辦活動、贊助器材、提供文化交流與資源支持，迅速累積運動初期用戶群並擴大曝光。</p></div>
+    <div class="year-block"><h2>第2年</h2><p>在上海和深圳成立分部，复制北京模式；打造青少年联赛（U10/U12）示范赛；培训首批本地裁判和教练。</p></div>
+    <div class="year-block"><h2>第3年</h2><p>联赛建设：北京、上海、深圳等地运行本地联赛（男/女、成年/青少年）；举办首届全国青少年棍网球锦标赛；扩大社会影响。</p></div>
+    <div class="year-block"><h2>第4年</h2><p>国家队培养：选拔并组建青少年国家队，参加亚太和世界U19赛事；重点培养守门员、专项位置；派遣运动员赴美/加交流或升学。</p></div>
+    <div class="year-block"><h2>第5年</h2><p>建立常年全国联赛体系，男女成年国家队备战国际大赛（亚运会、世锦赛预选）；在全国范围内持续推广校园项目；争取北京奥运后续支持。</p></div>
+  </main>
+  <script>
+    const blocks = document.querySelectorAll('.year-block');
+    const reveal = () => {
+      blocks.forEach(block => {
+        const rect = block.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          block.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+  </script>
 </body>
 </html>

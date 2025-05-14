@@ -1,53 +1,33 @@
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-}
-nav {
-    background-color: #004080;
-    padding: 10px;
-    text-align: center;
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #1c1c1e;
 }
 header {
-    background-color: #0066cc;
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
 }
-section {
-    padding: 20px;
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #007aff;
+  font-weight: 500;
 }
-.timeline-step {
-    margin-bottom: 20px;
-    background: white;
-    padding: 20px;
-    border-left: 5px solid #0066cc;
-    animation: slideIn 1s ease;
+nav a:hover {
+  text-decoration: underline;
 }
-@keyframes slideIn {
-    from { transform: translateX(-50px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+main {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
 }
-.club-card {
-    background: white;
-    padding: 20px;
-    margin: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+h1 {
+  font-size: 28px;
+  color: #007aff;
+}
+ul li {
+  margin-bottom: 10px;
 }
