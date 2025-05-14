@@ -1,88 +1,187 @@
-body {
-  font-family: "Helvetica Neue", sans-serif;
+/* 通用基础设置 */
+* {
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
   color: #333;
 }
+
+/* 导航栏样式 */
 .navbar {
-  background: #003366;
-  padding: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .navbar h1 {
-  color: white;
-  margin: 0;
+  font-size: 1.8rem;
 }
+
 .navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: none;
   display: flex;
+  gap: 20px;
 }
-.navbar li {
-  margin-left: 1rem;
+
+.navbar ul li a {
+  font-size: 1rem;
+  color: #fff;
+  padding: 5px 10px;
 }
-.navbar a {
+
+.navbar ul li a:hover {
+  background-color: #0056b3;
+  border-radius: 5px;
+}
+
+/* 首页背景图 */
+.home-banner {
+  background-image: url('https://images.pexels.com/photos/32012754/pexels-photo-32012754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-banner h1 {
+  font-size: 3rem;
   color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-.intro {
-  background: #e0f2ff;
-  padding: 2rem;
   text-align: center;
 }
-.section {
-  padding: 2rem;
+
+/* 页面内容容器 */
+.content-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
+
+/* 标题样式 */
+.content-container h1,
+.content-container h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.content-container ul {
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+/* 五年时间轴样式 */
 .timeline-container {
   position: relative;
-  margin: 2rem auto;
-  max-width: 800px;
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
 }
-.timeline-line {
+
+.timeline-container .timeline {
   position: absolute;
+  top: 50%;
   left: 50%;
-  width: 4px;
-  background: #003366;
-  top: 0;
-  bottom: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #007bff;
+  transform: translateX(-50%);
 }
-.timeline-item {
-  position: relative;
-  width: 50%;
-  padding: 1rem;
-  box-sizing: border-box;
+
+.timeline-container .year {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  background-color: #f7f7f7;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 0.9rem;
 }
-.timeline-item.left {
-  left: 0;
-  text-align: right;
+
+.timeline-container .year-left {
+  left: calc(50% - 300px);
+  transform: translateY(-50%);
 }
-.timeline-item.right {
-  left: 50%;
+
+.timeline-container .year-right {
+  right: calc(50% - 300px);
+  transform: translateY(-50%);
 }
-.timeline-content {
-  background: #fff;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  position: relative;
-}
-.timeline-content h3 {
-  margin-top: 0;
-  color: #003366;
-}
-@media (max-width: 768px) {
-  .timeline-item, .timeline-item.left, .timeline-item.right {
-    width: 100%;
-    left: 0 !important;
-    text-align: left;
-    margin-bottom: 1rem;
+
+/* 响应式设计 */
+@media (max-width: 900px) {
+  .navbar h1 {
+    font-size: 1.5rem;
   }
-  .timeline-line {
-    left: 10px;
+
+  .navbar ul li a {
+    font-size: 0.9rem;
+  }
+
+  .home-banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .content-container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .timeline-container .year {
+    width: 200px;
+  }
+}
+
+/* 针对手机优化 */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar h1 {
+    font-size: 1.3rem;
+  }
+
+  .navbar ul li a {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  .home-banner h1 {
+    font-size: 2rem;
+  }
+
+  .content-container {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .timeline-container .year {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .timeline-container .timeline {
+    height: 80%;
   }
 }
