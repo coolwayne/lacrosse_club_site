@@ -1,39 +1,53 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>首页</title>
+  <title>首页 - 中国长曲棍球</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .hero {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .hero img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- 導覽列 -->
+  <!-- 导航栏 -->
   <nav class="navbar">
+    <h1>中国长曲棍球</h1>
     <ul>
       <li><a href="index.html">首页</a></li>
       <li><a href="timeline.html">五年发展时间轴</a></li>
       <li><a href="clubs.html">俱乐部名单</a></li>
-      <li><a href="trainers.html">师资培训</a></li>
+      <li><a href="teachers.html">师资培训</a></li>
       <li><a href="about.html">关于我们</a></li>
     </ul>
   </nav>
 
-  <!-- 介紹段落 -->
-  <header class="intro-section">
-    <h1>欢迎来到中国长曲棍球推广平台</h1>
-    <p>
-      袋棍球被列入2028年洛杉矶奥运正式项目，也是入选北美名校的途径之一。<br />
-      我们的目标是从北京开始，逐步在全国范围内推广这项充满激情与团队精神的运动。
-    </p>
-  </header>
-
-  <main>
-    <section>
-      <h2>欢迎访问我们的首页</h2>
-      <p>请从上方导航栏选择页面了解更多信息。</p>
-    </section>
-  </main>
+  <!-- 首图与标题 -->
+  <div class="hero">
+    <img src="https://images.pexels.com/photos/32012754/pexels-photo-32012754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lacrosse field" />
+    <div class="hero-text">中国长曲棍球</div>
+  </div>
 
 </body>
 </html>
