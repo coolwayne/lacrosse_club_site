@@ -1,105 +1,53 @@
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f6f9fc;
-  color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
-
 nav {
-  background-color: #004080;
-  padding: 10px 20px;
+    background-color: #004080;
+    padding: 10px;
+    text-align: center;
 }
-
 nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-
 nav ul li {
-  margin-right: 20px;
+    display: inline;
+    margin: 0 15px;
 }
-
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
 header {
-  background-color: #007aff;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+    background-color: #0066cc;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
 }
-
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+section {
+    padding: 20px;
 }
-
-header p {
-  font-size: 1.2em;
-  margin: 5px 0;
+.timeline-step {
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-left: 5px solid #0066cc;
+    animation: slideIn 1s ease;
 }
-
-.timeline {
-  padding: 40px 20px;
-}
-
-.timeline h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2em;
-}
-
-.timeline-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.timeline-item {
-  background: white;
-  border-left: 5px solid #007aff;
-  margin-bottom: 20px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  animation: slideIn 0.6s ease;
-}
-
-.timeline-item h3 {
-  margin-top: 0;
-  color: #007aff;
-}
-
 @keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
-
-.clubs-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 40px 20px;
-}
-
 .club-card {
-  background: white;
-  border-left: 5px solid #007aff;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  animation: slideIn 0.6s ease;
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
